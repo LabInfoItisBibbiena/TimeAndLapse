@@ -1,2 +1,2 @@
 # TimeAndLapse
-RFID Timing System Software for SoapBox Race
+RFID Timing System Software for SpeedDown Race

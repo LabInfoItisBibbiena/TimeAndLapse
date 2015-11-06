@@ -1,0 +1,46 @@
+Thread per la sequenza di partenza
+
+Descrizione della procedura:
+La sequenza di avvia inizia con l'accensione della luce rossa.
+Dopo che sono trascorsi 5 secondi si accende la luce gialla
+Dopo altri 5 secondi si accendono in sequenza, con intervalli di 1 secondo,
+altre 5 luci ed al termine si accende la luce verde.
+Contestualmente al cambio della luce si attiva un suono, differente per l'accensione della luce verde. 
+-----
+
+Analisi dal punto di vista informatico:
+1 opzione;
+Creazione di un Thread che all'avvio inizializza la sequenza ed al suo completamente termina
+
+2 opzione:
+creazione di un thread che all'avvio si sospende: il coordinatore determina mediante l'invocazione di un metodo l'avvio della sequenza ed al suo completamento ritorna nello stato di sospensione
+
+Metodo che abortisce la sequenza del semaforo
+
+IL thread comunica verso l'esterno mediante un evento che notifica il cambiamento dello stato della sequenza (luci e suoni)
+
+
+NOMENCLATURA:
+CLASSE: StartSequence
+Costruttori:
+StartSequence();
+StartSequence(stepIntervall);
+
+METODI:
+Start()
+Abort()
+
+ENUMERATOR:
+LightColor: Default, Red, Yellow, Green, Sec1, Sec2, Sec3, Sec4, Sec5, All
+SoundType: Change, Start
+
+EVENTO:
+SequenceChange(LightColor light, SoundType sound)
+
+
+
+
+
+
+
+
